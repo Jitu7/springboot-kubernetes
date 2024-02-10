@@ -122,7 +122,7 @@
                         <image>eclipse-temurin:21.0.2_13-jre-jammy</image>
                     </from>
                     <to>
-                        <image>${dockerImageName}-jib</image>
+                        <image>${dockerImageName}</image>
                         <tags>
                             <tag>latest</tag>
                             <tag>${project.version}</tag>
