@@ -27,6 +27,6 @@ jobs:
       - if: ${{ github.ref == 'refs/heads/main' }}
         name: Build and Publish Docker Image
         run: |
-          ./mvnw clean package jib:dockerBuild -DskipTests
+          ./mvnw clean package jib:dockerBuild -DskipTests -Dspring.docker.compose.enabled=false
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker push ${{ secrets.DOCKER_USERNAME }}/bookmarker-api
