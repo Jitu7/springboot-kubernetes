@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bookmarker-api-deployment
+spec:
+  selector:
+    matchLabels:
+      app: bookmarker-api-pod
+  template:
+    metadata:
+      labels:
+        app: bookmarker-api-pod
+    spec:
+      containers:
+        - name: bookmarker-api
+          image: "jitu1995/bookmarker-api"
+          ports:
+            - containerPort: 8080
+#        env:
+#          - name: SPRING_PROFILES_ACTIVE
+#            value: k8s
