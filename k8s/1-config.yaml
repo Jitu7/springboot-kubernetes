@@ -6,6 +6,7 @@ data:
   postgres_host: postgres-svc
   postgres_port: "5432"
   postgres_dbname: appdb
+  log_dir: "/var/logs"
 ---
 apiVersion: v1
 kind: Secret
